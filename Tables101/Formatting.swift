@@ -8,7 +8,7 @@
 
 import Foundation
 
-class Formatters {
+class Formatting {
     
 static let dateFormatter: DateFormatter = {
     let df = DateFormatter()

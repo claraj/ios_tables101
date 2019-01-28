@@ -19,15 +19,15 @@ class TaskTableViewController: UITableViewController {
     }
     
     @IBAction func addNewTask(_ sender: Any) {
-        
         let inputAlert = UIAlertController(title: "Enter Task", message: "Describe what you need to do", preferredStyle: .alert)
         inputAlert.addTextField(configurationHandler: nil)
-        inputAlert.addAction(UIAlertAction(title: "Add", style: .default, handler: {(a: UIAlertAction) in
-            let description = inputAlert.textFields?[0].text ?? "Wat"
-            let task = Task(description: description)
-            let index = self.taskModel.add(task)
-            let indexPath = IndexPath(row: index, section: 0)
-            self.tableView.insertRows(at: [indexPath], with: .automatic)
+        inputAlert.addAction(UIAlertAction(title: "Add", style: .default, handler: {(action: UIAlertAction) in
+            if let description = inputAlert.textFields?[0].text {
+                let task = Task(description: description)
+                let index = self.taskModel.add(task)
+                let indexPath = IndexPath(row: index, section: 0)
+                self.tableView.insertRows(at: [indexPath], with: .automatic)
+            }
         }
         ))
         inputAlert.addAction(UIAlertAction(title: "Cancel", style: .cancel, handler: nil))
@@ -44,7 +44,7 @@ class TaskTableViewController: UITableViewController {
         let cell = tableView.dequeueReusableCell(withIdentifier: "UITableViewCell", for: indexPath)
         cell.textLabel?.text = task?.description
 //        let st  = Formatter.dateFormatter.string(from: Date())
-        let st = Formatters.dateFormatter.string(from: (task?.dateCreated)!)
+        let st = Formatting.dateFormatter.string(from: (task?.dateCreated)!)
         cell.detailTextLabel?.text = "Created at \(st)"
         return cell
     }
@@ -57,15 +57,11 @@ class TaskTableViewController: UITableViewController {
         
         if segue.identifier == "showDetail" {
             let detailView = segue.destination as! DetailViewController
-            
             let rowsSelected = tableView.indexPathsForSelectedRows
             let firstRow = rowsSelected?[0]
             let task = taskModel.getTask(at: (firstRow?.row)!)
             detailView.task = task
         }
-        
-        
-        
     }
     
 }

@@ -10,15 +10,15 @@
 
 class TaskList {
     
-    var tasks: [Task]
+    var tasks = [Task]()
     
-    init(){
-        tasks = [Task]()
-        
-//        tasks.append(Task(description: "spork"))
-//        tasks.append(Task(description: "bork"))
-//        tasks.append(Task(description: "woof"))
-    }
+//    init(){
+//        tasks = [Task]()
+//        
+////        tasks.append(Task(description: "spork"))
+////        tasks.append(Task(description: "bork"))
+////        tasks.append(Task(description: "woof"))
+//    }
     
     func add(_ task: Task) -> Int {
         tasks.append(task)
