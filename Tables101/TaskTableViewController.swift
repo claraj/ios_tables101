@@ -42,10 +42,9 @@ class TaskTableViewController: UITableViewController {
     override func tableView(_ tableView: UITableView, cellForRowAt indexPath: IndexPath) -> UITableViewCell {
         let task = taskModel.getTask(at: indexPath.row)
         let cell = tableView.dequeueReusableCell(withIdentifier: "UITableViewCell", for: indexPath)
-        cell.textLabel?.text = task?.description
-//        let st  = Formatter.dateFormatter.string(from: Date())
-        let st = Formatting.dateFormatter.string(from: (task?.dateCreated)!)
-        cell.detailTextLabel?.text = "Created at \(st)"
+        cell.textLabel?.text = task!.description
+        let formattedDateCreated = task!.formattedDateCreated
+        cell.detailTextLabel?.text = "Created at \(task!.formattedDateCreated)"
         return cell
     }
     

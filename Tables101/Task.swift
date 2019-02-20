@@ -17,3 +17,19 @@ class Task {
         self.dateCreated = dateCreated
     }
 }
+
+
+extension Task {
+    
+    var formattedDateCreated: String {
+        return Task.dateCreatedFormatter.string(from: dateCreated)
+    }
+    
+    static let dateCreatedFormatter = { () -> DateFormatter in 
+        let dateFormatter = DateFormatter()
+        dateFormatter.dateStyle = .short
+        dateFormatter.timeStyle = .short
+        return dateFormatter
+    }()
+    
+}
