@@ -101,7 +101,7 @@
                                 <nil key="textColor"/>
                                 <nil key="highlightedColor"/>
                             </label>
-                            <button opaque="NO" contentMode="scaleToFill" misplaced="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="S31-zg-zeC">
+                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="S31-zg-zeC">
                                 <rect key="frame" x="170" y="572" width="34" height="30"/>
                                 <state key="normal" title="Back"/>
                                 <connections>
@@ -117,13 +117,12 @@
                             <constraint firstItem="KEZ-Bd-XnN" firstAttribute="top" secondItem="z7g-wb-4xo" secondAttribute="bottom" constant="82" id="VCo-XX-TrR"/>
                             <constraint firstItem="z7g-wb-4xo" firstAttribute="top" secondItem="6Tk-OE-BBY" secondAttribute="top" constant="141" id="ZrQ-yB-Utv"/>
                             <constraint firstItem="KEZ-Bd-XnN" firstAttribute="centerX" secondItem="S31-zg-zeC" secondAttribute="centerX" id="dVp-fw-uSO"/>
-                            <constraint firstItem="S31-zg-zeC" firstAttribute="leading" secondItem="6Tk-OE-BBY" secondAttribute="leading" constant="170" id="jxc-zS-mQd"/>
                         </constraints>
                         <viewLayoutGuide key="safeArea" id="6Tk-OE-BBY"/>
                     </view>
                     <connections>
                         <outlet property="taskDate" destination="KEZ-Bd-XnN" id="Jgs-Sg-qyW"/>
-                        <outlet property="taskDescription" destination="z7g-wb-4xo" id="Qrt-41-vmf"/>
+                        <outlet property="taskDetail" destination="z7g-wb-4xo" id="9wV-3r-EL5"/>
                     </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="dkx-z0-nzr" sceneMemberID="firstResponder"/>
