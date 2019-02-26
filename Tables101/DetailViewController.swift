@@ -12,15 +12,15 @@ class DetailViewController: UIViewController {
     
     var task: Task!
     
-    @IBOutlet weak var taskDescription: UILabel!
-    @IBOutlet weak var taskDate: UILabel!
- 
+    @IBOutlet var taskDetail: UILabel!
+    @IBOutlet var taskDate: UILabel!
+    
     @IBAction func back(_ sender: Any) {
         dismiss(animated: true, completion: nil)
     }
     
     override func viewDidAppear(_ animated: Bool) {
-        taskDescription.text = task.description
+        taskDetail.text = task.detail
         taskDate.text = task.formattedDateCreated
     }
     

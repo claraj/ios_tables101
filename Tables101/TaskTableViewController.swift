@@ -19,11 +19,11 @@ class TaskTableViewController: UITableViewController {
     }
     
     @IBAction func addNewTask(_ sender: Any) {
-        let inputAlert = UIAlertController(title: "Enter Task", message: "Describe what you need to do", preferredStyle: .alert)
+        let inputAlert = UIAlertController(title: "Enter Task", message: "What do you need to do?", preferredStyle: .alert)
         inputAlert.addTextField(configurationHandler: nil)
         inputAlert.addAction(UIAlertAction(title: "Add", style: .default, handler: {(action: UIAlertAction) in
-            if let description = inputAlert.textFields?[0].text {
-                let task = Task(description: description)
+            if let detail = inputAlert.textFields?[0].text {
+                let task = Task(detail: detail)
                 let index = self.taskModel.add(task)
                 let indexPath = IndexPath(row: index, section: 0)
                 self.tableView.insertRows(at: [indexPath], with: .automatic)
@@ -42,8 +42,7 @@ class TaskTableViewController: UITableViewController {
     override func tableView(_ tableView: UITableView, cellForRowAt indexPath: IndexPath) -> UITableViewCell {
         let task = taskModel.getTask(at: indexPath.row)
         let cell = tableView.dequeueReusableCell(withIdentifier: "UITableViewCell", for: indexPath)
-        cell.textLabel?.text = task!.description
-        let formattedDateCreated = task!.formattedDateCreated
+        cell.textLabel?.text = task!.detail
         cell.detailTextLabel?.text = "Created at \(task!.formattedDateCreated)"
         return cell
     }

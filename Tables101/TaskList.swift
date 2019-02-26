@@ -12,13 +12,11 @@ class TaskList {
     
     var tasks = [Task]()
     
-//    init(){
-//        tasks = [Task]()
-//        
-////        tasks.append(Task(description: "spork"))
-////        tasks.append(Task(description: "bork"))
-////        tasks.append(Task(description: "woof"))
-//    }
+    init(){
+//        tasks.append(Task(detail: "water plants"))
+//        tasks.append(Task(detail: "feed cat"))
+//        tasks.append(Task(detail: "get car oil changed"))
+    }
     
     func add(_ task: Task) -> Int {
         tasks.append(task)
@@ -34,5 +32,11 @@ class TaskList {
     
     func count() -> Int {
         return tasks.count
+    }
+    
+    func deleteTask(task: Task) {
+        if let i = tasks.index(of: task) {
+            tasks.remove(at: i)
+        }
     }
 }
