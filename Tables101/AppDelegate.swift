@@ -19,10 +19,7 @@ class AppDelegate: UIResponder, UIApplicationDelegate {
         
         let taskList = TaskList()
         let tableViewController = window?.rootViewController as? TaskTableViewController
-        
-      //  if tableViewController != nil {
-            tableViewController?.taskModel = taskList
-      //  }
+        tableViewController?.taskModel = taskList
         
         return true
     }

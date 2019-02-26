@@ -6,17 +6,9 @@
 //  Copyright © 2019 clara. All rights reserved.
 //
 
-//import Foundation
-
 class TaskList {
     
     var tasks = [Task]()
-    
-    init(){
-//        tasks.append(Task(detail: "water plants"))
-//        tasks.append(Task(detail: "feed cat"))
-//        tasks.append(Task(detail: "get car oil changed"))
-    }
     
     func add(_ task: Task) -> Int {
         tasks.append(task)

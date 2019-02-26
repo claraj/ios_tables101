@@ -12,7 +12,6 @@ class TaskTableViewController: UITableViewController {
     
     var taskModel: TaskList!
     
-    
     override func viewDidLoad() {
         super.viewDidLoad()
         // Do any additional setup after loading the view, typically from a nib.
@@ -28,14 +27,12 @@ class TaskTableViewController: UITableViewController {
                 let indexPath = IndexPath(row: index, section: 0)
                 self.tableView.insertRows(at: [indexPath], with: .automatic)
             }
-        }
-        ))
+        }))
         inputAlert.addAction(UIAlertAction(title: "Cancel", style: .cancel, handler: nil))
         present(inputAlert, animated: true)
     }
     
     override func tableView(_ tableView: UITableView, numberOfRowsInSection section: Int) -> Int {
-        
         return taskModel.count()
     }
     
@@ -47,12 +44,7 @@ class TaskTableViewController: UITableViewController {
         return cell
     }
     
-    override func tableView(_ tableView: UITableView, didSelectRowAt indexPath: IndexPath) {
-        print("select row")
-    }
-    
     override func prepare(for segue: UIStoryboardSegue, sender: Any?) {
-        
         if segue.identifier == "showDetail" {
             let detailView = segue.destination as! DetailViewController
             let rowsSelected = tableView.indexPathsForSelectedRows
@@ -61,6 +53,5 @@ class TaskTableViewController: UITableViewController {
             detailView.task = task
         }
     }
-    
 }
 

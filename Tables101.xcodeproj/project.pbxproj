@@ -17,7 +17,6 @@
 		E747865921FE79630013D125 /* DetailViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = E747865821FE79630013D125 /* DetailViewController.swift */; };
 		E747865B21FE7B9C0013D125 /* TaskList.swift in Sources */ = {isa = PBXBuildFile; fileRef = E747865A21FE7B9C0013D125 /* TaskList.swift */; };
 		E747865D21FE808A0013D125 /* Task.swift in Sources */ = {isa = PBXBuildFile; fileRef = E747865C21FE808A0013D125 /* Task.swift */; };
-		E747865F21FEA1EA0013D125 /* Formatting.swift in Sources */ = {isa = PBXBuildFile; fileRef = E747865E21FEA1EA0013D125 /* Formatting.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -54,7 +53,6 @@
 		E747865821FE79630013D125 /* DetailViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DetailViewController.swift; sourceTree = "<group>"; };
 		E747865A21FE7B9C0013D125 /* TaskList.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TaskList.swift; sourceTree = "<group>"; };
 		E747865C21FE808A0013D125 /* Task.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Task.swift; sourceTree = "<group>"; };
-		E747865E21FEA1EA0013D125 /* Formatting.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Formatting.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -114,7 +112,6 @@
 				E747865821FE79630013D125 /* DetailViewController.swift */,
 				E747865A21FE7B9C0013D125 /* TaskList.swift */,
 				E747865C21FE808A0013D125 /* Task.swift */,
-				E747865E21FEA1EA0013D125 /* Formatting.swift */,
 			);
 			path = Tables101;
 			sourceTree = "<group>";
@@ -268,7 +265,6 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				E747865F21FEA1EA0013D125 /* Formatting.swift in Sources */,
 				E747865B21FE7B9C0013D125 /* TaskList.swift in Sources */,
 				E747865921FE79630013D125 /* DetailViewController.swift in Sources */,
 				E747865D21FE808A0013D125 /* Task.swift in Sources */,

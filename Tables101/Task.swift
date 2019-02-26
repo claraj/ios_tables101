@@ -19,7 +19,6 @@ class Task: NSObject {
     }
 }
 
-
 extension Task {
     
     var formattedDateCreated: String {
@@ -32,5 +31,6 @@ extension Task {
         dateFormatter.timeStyle = .short
         return dateFormatter
     }()
-    
 }
+
+
